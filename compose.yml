@@ -1,0 +1,7 @@
+docker run -d \
+  --name hawser \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v hawser_stacks:/data/stacks \
+  -e DOCKHAND_SERVER_URL=wss://dockhand.unikunu.com/api/hawser/connect \
+  -e TOKEN=CHANGE_ME \
+  ghcr.io/finsys/hawser:latest
